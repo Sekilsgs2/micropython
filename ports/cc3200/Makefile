@@ -25,7 +25,7 @@ CFLAGS += -g -ffunction-sections -fdata-sections -fno-common -fsigned-char -mno-
 CFLAGS += -Iboards/$(BOARD)
 CFLAGS += $(CFLAGS_MOD)
 
-LDFLAGS = -Wl,-nostdlib -Wl,--gc-sections -Wl,-Map=$@.map
+LDFLAGS = -mcpu=cortex-m4 -mtune=cortex-m4 -Wl,-nostdlib -Wl,--gc-sections -Wl,-Map=$@.map
 
 FLASH_SIZE_WIPY = 2M
 FLASH_SIZE_LAUNCHXL = 1M
